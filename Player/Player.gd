@@ -50,13 +50,10 @@ func _physics_process(delta):
 	if not jumping:
 		if not walk_left and not walk_right:
 			$PlayerSprite.play("idle")
-			print("play idle")
 		if walk_left:
 			$PlayerSprite.play("walking-left")
-			print("play walk left")
 		if walk_right:
 			$PlayerSprite.play("walking-right")
-			print("play walk right")
 		if (walk_left or walk_right) and not $SoundPlayer.playing:
 			play_sound("player-walk")
 	

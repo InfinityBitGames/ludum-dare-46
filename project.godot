@@ -154,6 +154,7 @@ shoot={
 2d_physics/layer_5="EnemyProjectiles"
 2d_physics/layer_6="Exits"
 2d_physics/layer_7="Doors"
+2d_physics/layer_8="BloodParticles"
 
 [rendering]
 

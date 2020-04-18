@@ -3,10 +3,12 @@ extends Node2D
 func load_a_level(level_name = ""):
 	for child in get_children():
 		remove_child(child)
+		child.queue_free()
 	
 	var next_level = load(get_level_path(level_name))
 	var level = next_level.instance()
 	level.initiate()
+#	add_child_below_node(level, get_node("Level").get_node("TileMap"))
 	add_child(level)
 
 func get_level_path(level_name:String):
