@@ -47,8 +47,18 @@ func _physics_process(delta):
 	velocity += force * delta
 	velocity = move_and_slide(velocity, Vector2.UP)
 	
-	if (walk_left or walk_right) and not $SoundPlayer.playing:
-		play_sound("player-walk")
+	if not jumping:
+		if not walk_left and not walk_right:
+			$PlayerSprite.play("idle")
+			print("play idle")
+		if walk_left:
+			$PlayerSprite.play("walking-left")
+			print("play walk left")
+		if walk_right:
+			$PlayerSprite.play("walking-right")
+			print("play walk right")
+		if (walk_left or walk_right) and not $SoundPlayer.playing:
+			play_sound("player-walk")
 	
 	jump_physics()
 	slash_physics()
@@ -60,6 +70,7 @@ func jump_physics():
 	var jump = Input.is_action_pressed("up")
 	if jump and not jumping:
 		play_sound("player-hit")
+		$PlayerSprite.play("jump")
 		velocity.y = -JUMP_SPEED
 		jumping = true
 
@@ -82,9 +93,19 @@ func play_sound(sound_name):
 		$SoundPlayer.play()
 
 func collect_item(item):
-	keys.append(item.door_id)
-	item.collected()
 	print("collecting: " + item.name)
+	if item.name.begins_with ("Key"):
+		keys.append(item.door_id)
+	if item.name.begins_with ("Vial"):
+		get_vial()
+	item.collected()
+
+func get_vial():
+	print("eating a vial...of blood!")
+	#play vial eat animation, particles, sounds
+	#gain health
+	#gain score
+
 
 func has_key_to_door(door_id):
 	print(keys)
