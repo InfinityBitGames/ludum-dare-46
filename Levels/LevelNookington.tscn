@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://TileSet.tres" type="TileSet" id=1]
+[ext_resource path="res://Levels/Level.gd" type="Script" id=2]
+[ext_resource path="res://Thomas Test Room/test room behind.png" type="Texture" id=3]
+[ext_resource path="res://Thomas Test Room/test room above.png" type="Texture" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+[node name="Level" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="TileMap" type="TileMap" parent="."]
+visible = false
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+collision_layer = 2
+format = 1
+tile_data = PoolIntArray( 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0, 524304, 0, 0, 524305, 0, 0, 524306, 0, 0, 524307, 0, 0, 524308, 0, 0, 524309, 0, 0, 524310, 0, 0, 524311, 0, 0, 524313, 0, 0, 524314, 0, 0, 524315, 0, 0, 524316, 0, 0, 524317, 0, 0, 524318, 0, 0, 524319, 0, 0, 524320, 0, 0, 524321, 0, 0, 524322, 0, 0, 524323, 0, 0, 589827, 0, 0, 589847, 0, 0, 589849, 0, 0, 589859, 0, 0, 655363, 0, 0, 655383, 0, 0, 655385, 0, 0, 655395, 0, 0, 720899, 0, 0, 720919, 0, 0, 720921, 0, 0, 720931, 0, 0, 786435, 0, 0, 786455, 0, 0, 786457, 0, 0, 786463, 0, 0, 786464, 0, 0, 786465, 0, 0, 786466, 0, 0, 786467, 0, 0, 851971, 0, 0, 851991, 0, 0, 851993, 0, 0, 851999, 0, 0, 852000, 0, 0, 852001, 0, 0, 852002, 0, 0, 852003, 0, 0, 917507, 0, 0, 917527, 0, 0, 917529, 0, 0, 917539, 0, 0, 983043, 0, 0, 983063, 0, 0, 983065, 0, 0, 983075, 0, 0, 1048579, 0, 0, 1048599, 0, 0, 1048601, 0, 0, 1048606, 0, 0, 1048607, 0, 0, 1048608, 0, 0, 1048609, 0, 0, 1048610, 0, 0, 1048611, 0, 0, 1114115, 0, 0, 1114135, 0, 0, 1114136, 0, 0, 1114137, 0, 0, 1114142, 0, 0, 1179651, 0, 0, 1179678, 0, 0, 1245187, 0, 0, 1245188, 0, 0, 1245189, 0, 0, 1245190, 0, 0, 1245191, 0, 0, 1245192, 0, 0, 1245193, 0, 0, 1245194, 0, 0, 1245214, 0, 0, 1310730, 0, 0, 1310750, 0, 0, 1376266, 0, 0, 1376267, 0, 0, 1376268, 0, 0, 1376269, 0, 0, 1376270, 0, 0, 1376271, 0, 0, 1376272, 0, 0, 1376273, 0, 0, 1376274, 0, 0, 1376275, 0, 0, 1376276, 0, 0, 1376277, 0, 0, 1376278, 0, 0, 1376279, 0, 0, 1376280, 0, 0, 1376281, 0, 0, 1376282, 0, 0, 1376283, 0, 0, 1376284, 0, 0, 1376285, 0, 0, 1376286, 0, 0 )
+
+[node name="StartPosition" type="Position2D" parent="."]
+position = Vector2( 100, 280 )
+
+[node name="Exit" type="Area2D" parent="."]
+position = Vector2( 528, 183 )
+collision_layer = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit"]
+shape = SubResource( 1 )
+
+[node name="Doors" type="Node2D" parent="."]
+
+[node name="Keys" type="Node2D" parent="."]
+
+[node name="test room above" type="Sprite" parent="."]
+position = Vector2( 0, 4 )
+z_index = 1
+texture = ExtResource( 4 )
+offset = Vector2( 320, 180 )
+
+[node name="test room behind" type="Sprite" parent="."]
+position = Vector2( 0, 4 )
+z_index = -1
+texture = ExtResource( 3 )
+offset = Vector2( 320, 180 )
+[connection signal="body_entered" from="Exit" to="." method="_on_Exit_body_entered"]
