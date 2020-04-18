@@ -26,8 +26,8 @@ Sounds="*res://Sounds/Sounds.gd"
 
 [display]
 
-window/size/width=640
-window/size/height=360
+window/size/width=1280
+window/size/height=720
 window/stretch/mode="viewport"
 window/stretch/aspect="keep"
 
@@ -157,5 +157,9 @@ shoot={
 
 [rendering]
 
+quality/driver/driver_name="GLES2"
+quality/2d/gles2_use_nvidia_rect_flicker_workaround=true
+quality/2d/use_pixel_snap=true
+quality/depth/hdr=false
 environment/default_environment="res://default_env.tres"
 quality/dynamic_fonts/use_oversampling=false

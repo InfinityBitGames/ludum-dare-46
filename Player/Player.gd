@@ -3,12 +3,12 @@ extends KinematicBody2D
 var velocity : Vector2
 var jumping = false
 
-export var GRAVITY = 500.0
+export var GRAVITY = 550.0
 export var WALK_FORCE = 600.0
 export var WALK_MIN_SPEED = 10.0
 export var WALK_MAX_SPEED = 200.0
 export var STOP_FORCE = 1300.0
-export var JUMP_SPEED = 200.0
+export var JUMP_SPEED = 250.0
 
 var keys = []
 
