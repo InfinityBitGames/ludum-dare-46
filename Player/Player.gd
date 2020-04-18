@@ -10,6 +10,12 @@ export var WALK_MAX_SPEED = 200.0
 export var STOP_FORCE = 1300.0
 export var JUMP_SPEED = 200.0
 
+var keys = []
+
+#sound fx
+var player_hit = load("res://Sounds/Player/player-hit.wav")
+var player_walk = load("res://Sounds/Player/player-walk.wav")
+
 func _physics_process(delta):
 		# Create forces
 	var force = Vector2(0, GRAVITY)
@@ -41,6 +47,9 @@ func _physics_process(delta):
 	velocity += force * delta
 	velocity = move_and_slide(velocity, Vector2.UP)
 	
+	if (walk_left or walk_right) and not $SoundPlayer.playing:
+		play_sound("player-walk")
+	
 	jump_physics()
 	slash_physics()
 	shoot_physics()
@@ -50,7 +59,7 @@ func jump_physics():
 		jumping = false
 	var jump = Input.is_action_pressed("up")
 	if jump and not jumping:
-		Sounds.play_sound("jump")
+		play_sound("player-hit")
 		velocity.y = -JUMP_SPEED
 		jumping = true
 
@@ -62,3 +71,21 @@ func shoot_physics():
 	if Input.is_action_just_pressed("shoot"):
 		print("shoot!")
 	
+func play_sound(sound_name):
+	$SoundPlayer.stream = null
+	if sound_name == "player-hit":
+		$SoundPlayer.stream = player_hit
+	if sound_name == "player-walk":
+		$SoundPlayer.stream = player_walk
+	
+	if $SoundPlayer.stream != null:
+		$SoundPlayer.play()
+
+func collect_item(item):
+	keys.append(item.door_id)
+	item.collected()
+	print("collecting: " + item.name)
+
+func has_key_to_door(door_id):
+	print(keys)
+	return keys.has(door_id)
