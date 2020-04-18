@@ -10,17 +10,12 @@ export var WALK_MAX_SPEED = 200.0
 export var STOP_FORCE = 1300.0
 export var JUMP_SPEED = 200.0
 
-#export var jumpspeed = 1500
-#export var gravity   = 500.0
-#export var walkspeed = 350
-
 func _physics_process(delta):
 		# Create forces
 	var force = Vector2(0, GRAVITY)
 	
 	var walk_left = Input.is_action_pressed("left")
 	var walk_right = Input.is_action_pressed("right")
-
 
 	var stop = true
 
@@ -58,17 +53,12 @@ func jump_physics():
 		Sounds.play_sound("jump")
 		velocity.y = -JUMP_SPEED
 		jumping = true
-#		current_jumps += 1
-#		$AnimationPlayer.play("Jump")
-#		$BodyAnimator.play("jumping")
 
 func slash_physics():
 	if Input.is_action_just_pressed("slash"):
 		print("slash!")
-	pass
 
 func shoot_physics():
 	if Input.is_action_just_pressed("shoot"):
 		print("shoot!")
-	pass
 	

@@ -9,7 +9,6 @@ func initiate():
 	add_child(Player)
 
 func _on_Exit_body_entered(body):
-#	print(body.name)
 	if body.name == "PlayerBody":
 		Game.level_end()
-	pass # Replace with function body.
+
