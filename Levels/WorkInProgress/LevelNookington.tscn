@@ -2,8 +2,8 @@
 
 [ext_resource path="res://TileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://Levels/Level.gd" type="Script" id=2]
-[ext_resource path="res://Thomas Test Room/test room behind.png" type="Texture" id=3]
-[ext_resource path="res://Thomas Test Room/test room above.png" type="Texture" id=4]
+[ext_resource path="res://Thomas Test Room/test room above.png" type="Texture" id=3]
+[ext_resource path="res://Thomas Test Room/test room behind.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -35,12 +35,14 @@ shape = SubResource( 1 )
 [node name="test room above" type="Sprite" parent="."]
 position = Vector2( 0, 4 )
 z_index = 1
-texture = ExtResource( 4 )
+texture = ExtResource( 3 )
 offset = Vector2( 320, 180 )
 
 [node name="test room behind" type="Sprite" parent="."]
 position = Vector2( 0, 4 )
 z_index = -1
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 offset = Vector2( 320, 180 )
+
+[node name="BloodParticles" type="Node2D" parent="."]
 [connection signal="body_entered" from="Exit" to="." method="_on_Exit_body_entered"]
