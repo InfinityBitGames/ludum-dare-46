@@ -21,5 +21,4 @@ func float(minimum, maximum):
 
 func from_array(list:Array):
 	return list[randi() % list.size()]
-	var choice = integer(0, list.size())
 	
