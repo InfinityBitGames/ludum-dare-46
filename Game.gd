@@ -3,7 +3,7 @@ extends Node2D
 var load_a_level = false
 
 func _ready():
-	$LevelLoader.load_a_level("Level1")
+	$LevelLoader.load_a_level("Level4")
 
 func level_start():
 	pass

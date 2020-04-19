@@ -23,6 +23,7 @@ config/icon="res://icon.png"
 
 Random="*res://Random.gd"
 Sounds="*res://Sounds/Sounds.gd"
+Stats="*res://Stats.gd"
 
 [display]
 

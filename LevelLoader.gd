@@ -5,6 +5,8 @@ func load_a_level(level_name = ""):
 		remove_child(child)
 		child.queue_free()
 	
+	Stats.increase_difficulty()
+	
 	var next_level = load(get_level_path(level_name))
 	var level = next_level.instance()
 	level.initiate()

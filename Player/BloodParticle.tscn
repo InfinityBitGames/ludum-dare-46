@@ -3,8 +3,8 @@
 [ext_resource path="res://Player/blood_particle_1_prog.png" type="Texture" id=1]
 [ext_resource path="res://Player/BloodParticle.gd" type="Script" id=2]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 1.99909, 1.99821 )
+[sub_resource type="CircleShape2D" id=1]
+radius = 0.851156
 
 [node name="BloodParticle" type="KinematicBody2D"]
 collision_layer = 128
