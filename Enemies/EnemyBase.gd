@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+onready var level = get_tree().get_root().get_node("Game").get_node("LevelLoader").get_node("Level")
+
 export var is_pointing_left = true
 
 

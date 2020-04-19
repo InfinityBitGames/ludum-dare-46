@@ -11,6 +11,7 @@ func _ready():
 func on_pressed_play():
 	$LevelLoader.load_a_level("StartingLevel")
 	$MainMenu.visible = false
+	Stats.score = 0.0
 	print("play that sucka!")
 
 func on_pressed_credits():
@@ -23,7 +24,7 @@ func level_end():
 	load_a_level = true
 
 func _process(delta):
-	var _temp = delta
+	Stats.score += delta
 	if load_a_level:
 		load_a_level = false
 		$LevelLoader.load_a_level()

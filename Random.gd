@@ -17,7 +17,7 @@ func integer(minimum, maximum):
 func float(minimum, maximum):
 	if (maximum <= minimum):
 		return minimum
-	return randomizer.rand_range(minimum, maximum)
+	return randomizer.randf_range(minimum, maximum)
 
 func from_array(list:Array):
 	return list[randi() % list.size()]

@@ -17,14 +17,19 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 12 ), ExtResource( 7 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "running-right",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 11 ), ExtResource( 6 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "running-left",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 5 ), ExtResource( 13 ) ],
 "loop": true,
 "name": "shooting-left",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 14 ) ],
-"loop": true,
-"name": "idle-right",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 8 ), ExtResource( 14 ) ],
@@ -37,14 +42,9 @@ animations = [ {
 "name": "idle-left",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 3 ), ExtResource( 12 ), ExtResource( 7 ), ExtResource( 10 ) ],
+"frames": [ ExtResource( 14 ) ],
 "loop": true,
-"name": "running-right",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 9 ), ExtResource( 11 ), ExtResource( 6 ), ExtResource( 4 ) ],
-"loop": true,
-"name": "running-left",
+"name": "idle-right",
 "speed": 5.0
 } ]
 
