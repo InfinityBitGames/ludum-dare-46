@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/scientist-scream3.wav-4af32a5f5eefb72cf82dfd9d4ded8e82.sample"
+
+[deps]
+
+source_file="res://Sounds/Enemy SFX/scientist-scream3.wav"
+dest_files=[ "res://.import/scientist-scream3.wav-4af32a5f5eefb72cf82dfd9d4ded8e82.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

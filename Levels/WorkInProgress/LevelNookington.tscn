@@ -11,7 +11,6 @@
 script = ExtResource( 2 )
 
 [node name="TileMap" type="TileMap" parent="."]
-visible = false
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 16, 16 )
 collision_layer = 2
@@ -32,6 +31,8 @@ shape = SubResource( 1 )
 
 [node name="Keys" type="Node2D" parent="."]
 
+[node name="BloodParticles" type="Node2D" parent="."]
+
 [node name="test room above" type="Sprite" parent="."]
 position = Vector2( 0, 4 )
 z_index = 1
@@ -43,6 +44,4 @@ position = Vector2( 0, 4 )
 z_index = -1
 texture = ExtResource( 4 )
 offset = Vector2( 320, 180 )
-
-[node name="BloodParticles" type="Node2D" parent="."]
 [connection signal="body_entered" from="Exit" to="." method="_on_Exit_body_entered"]
