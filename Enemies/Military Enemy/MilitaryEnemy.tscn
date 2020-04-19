@@ -57,3 +57,6 @@ script = ExtResource( 2 )
 frames = SubResource( 1 )
 animation = "idle-left"
 playing = true
+
+[node name="Barrel" type="Position2D" parent="." index="2"]
+position = Vector2( -11.9516, 2.95578 )
