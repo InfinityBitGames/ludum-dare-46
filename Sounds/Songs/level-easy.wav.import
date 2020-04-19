@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/level-easy.wav-fcfaa805f64a113b96573dde2309fbfd.sample"
+
+[deps]
+
+source_file="res://Sounds/Songs/level-easy.wav"
+dest_files=[ "res://.import/level-easy.wav-fcfaa805f64a113b96573dde2309fbfd.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
