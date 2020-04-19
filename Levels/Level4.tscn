@@ -7,7 +7,6 @@
 [ext_resource path="res://Enemies/Military Enemy/MilitaryEnemy.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Enemies/Bullet.tscn" type="PackedScene" id=6]
 
-
 [node name="Level" instance=ExtResource( 4 )]
 
 [node name="TileMap" parent="." index="0"]
@@ -20,7 +19,7 @@ position = Vector2( 16.9933, 43.0276 )
 position = Vector2( 179.697, 65.0023 )
 
 [node name="Door" parent="Doors" index="0" instance=ExtResource( 2 )]
-position = Vector2( 134.007, 63.6228 )
+position = Vector2( 134, 56 )
 door_id = 10
 
 [node name="Key" parent="Keys" index="0" instance=ExtResource( 1 )]
