@@ -5,7 +5,6 @@
 [ext_resource path="res://Placeables/Door.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Placeables/Vial.tscn" type="PackedScene" id=4]
 
-
 [node name="Level" instance=ExtResource( 1 )]
 
 [node name="TileMap" parent="." index="0"]
@@ -16,10 +15,10 @@ position = Vector2( 441.874, 118.619 )
 
 [node name="Door" parent="Doors" index="0" instance=ExtResource( 3 )]
 modulate = Color( 0.929412, 0.0745098, 0.0745098, 1 )
-position = Vector2( 336.239, 31.8272 )
+position = Vector2( 336, 24 )
 
 [node name="Door2" parent="Doors" index="1" instance=ExtResource( 3 )]
-position = Vector2( 343.939, 111.908 )
+position = Vector2( 344, 104 )
 door_id = 2
 
 [node name="Key" parent="Keys" index="0" instance=ExtResource( 2 )]
