@@ -3,9 +3,9 @@ extends AudioStreamPlayer
 onready var tween = $Tween
 
 #onready var intro_song = load("res://Sounds/Songs/intro.wav")
-onready var intro_song = load("res://Sounds/Songs/song-title.wav")
-onready var easy_level_song = load("res://Sounds/Songs/song-1.wav")
-onready var medium_level_song = load("res://Sounds/Songs/song-2.wav")
+onready var intro_song = load("res://Sounds/song-title.wav")
+onready var easy_level_song = load("res://Sounds/song-1.wav")
+onready var medium_level_song = load("res://Sounds/song-2.wav")
 
 var next_song
 

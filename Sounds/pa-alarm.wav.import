@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/pa-alarm.wav-44d1823127613b1d977ae17b49426eed.sample"
+
+[deps]
+
+source_file="res://Sounds/pa-alarm.wav"
+dest_files=[ "res://.import/pa-alarm.wav-44d1823127613b1d977ae17b49426eed.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -13,8 +13,8 @@ export var JUMP_SPEED = 250.0
 var keys = []
 
 #sound fx
-var player_hit = load("res://Sounds/Player/player-hit.wav")
-var player_walk = load("res://Sounds/Player/player-walk.wav")
+var player_hit = load("res://Sounds/leech-land.wav")
+var player_walk = load("res://Sounds/leech-walk.wav")
 
 func _process(delta):
 	get_tree().get_root().get_node("Game").get_node("CanvasLayer").get_node("Label").text = \
