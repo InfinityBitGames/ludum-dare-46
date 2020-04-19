@@ -1,0 +1,15 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+path="res://.import/credits mask.bmp-dabc03fe0adb11c5247df652be28516a.res"
+
+[deps]
+
+source_file="res://Menus/Buttons/credits mask.bmp"
+dest_files=[ "res://.import/credits mask.bmp-dabc03fe0adb11c5247df652be28516a.res" ]
+
+[params]
+
+create_from=0
+threshold=0.5

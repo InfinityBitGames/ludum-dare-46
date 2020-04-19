@@ -1,5 +1,8 @@
 extends Node2D
 
+var levels_to_change_music = 5
+var levels_loaded = 0
+
 func load_a_level(level_name = ""):
 	for child in get_children():
 		remove_child(child)
@@ -12,6 +15,14 @@ func load_a_level(level_name = ""):
 	level.initiate()
 #	add_child_below_node(level, get_node("Level").get_node("TileMap"))
 	add_child(level)
+	check_music()
+
+func check_music():
+	if levels_loaded == 0:
+		get_parent().get_node("MusicPlayer").play_easy_level_song()
+	if levels_to_change_music == levels_loaded:
+		get_parent().get_node("MusicPlayer").play_medium_level_song()
+	levels_loaded += 1
 
 func get_level_path(level_name:String):
 	if level_name == "":
@@ -23,7 +34,7 @@ func get_level_path(level_name:String):
 			var level : String = dir.get_next()
 			if level == "":
 				break
-			if level.ends_with(".tscn") and level != "LevelBase.tscn":
+			if level.ends_with(".tscn") and level != "LevelBase.tscn"and level != "StartingLevel.tscn":
 				levels.append(level)
 		dir.list_dir_end()
 		var random_level = Random.from_array(levels)

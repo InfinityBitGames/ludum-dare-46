@@ -3,7 +3,18 @@ extends Node2D
 var load_a_level = false
 
 func _ready():
-	$LevelLoader.load_a_level("Level4")
+	#$LevelLoader.load_a_level("Level4")
+	$MainMenu/AnimatedSprite/PlayButton.connect("pressed", self, "on_pressed_play")
+	$MainMenu/AnimatedSprite/CreditsButton.connect("pressed", self, "on_pressed_credits")
+	pass
+
+func on_pressed_play():
+	$LevelLoader.load_a_level("StartingLevel")
+	$MainMenu.visible = false
+	print("play that sucka!")
+
+func on_pressed_credits():
+	print("credit those suckas!")
 
 func level_start():
 	pass
