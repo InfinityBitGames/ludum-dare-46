@@ -1,6 +1,6 @@
 extends AudioStreamPlayer
 
-onready var intro_song = load("res://Sounds/Songs/intro.wav")
+onready var intro_song = load("res://Sounds/Songs/song-title.wav")
 
 func _ready():
 	stream = intro_song
