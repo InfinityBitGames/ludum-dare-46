@@ -13,8 +13,8 @@ export var JUMP_SPEED = 250.0
 var keys = []
 
 #sound fx
-var player_hit = load("res://Sounds/Player/player-hit.wav")
-var player_walk = load("res://Sounds/Player/player-walk.wav")
+var player_hit = load("res://Sounds/leech-land.wav")
+var player_walk = load("res://Sounds/leech-walk.wav")
 
 func _physics_process(delta):
 		# Create forces

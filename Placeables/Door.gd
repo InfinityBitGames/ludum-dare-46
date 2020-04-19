@@ -3,7 +3,7 @@ extends Node2D
 export var door_id = 1
 
 #sound fx
-var door_open = load("res://Sounds/Environment/door-open.wav")
+var door_open = load("res://Sounds/door-open.wav")
 
 func _on_PlayerDetector_body_entered(body):
 	print(body.name)
