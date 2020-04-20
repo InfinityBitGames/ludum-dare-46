@@ -3,7 +3,7 @@ extends Node2D
 onready var Game = get_tree().get_root().get_node("Game")
 var Player_reference = load("res://Player/Player.tscn")
 
-export var max_blood_particles = 1000
+export var max_blood_particles = 200
 
 func initiate():
 	var Player = Player_reference.instance()

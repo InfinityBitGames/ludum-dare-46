@@ -4,8 +4,12 @@ onready var difficulty = 1
 onready var difficulty_multiplier = 1.1
 
 onready var score = 0.0
-onready var life = 1000
+onready var life = 100
 onready var life_max = 1000
+onready var life_default = 1000
+
+onready var best_score = 0
+onready var last_score = 0
 
 func get_difficulty():
 	return difficulty

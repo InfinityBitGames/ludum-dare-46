@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/standing 1.png-ade8ccee556bed2c53774c2530c743a7.stex"
+path="res://.import/standing_right_1.png-abbdd1a7414062cb110a167b13a1e8a5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemies/Scientist Enemy/standing 1.png"
-dest_files=[ "res://.import/standing 1.png-ade8ccee556bed2c53774c2530c743a7.stex" ]
+source_file="res://Enemies/Scientist Enemy/standing_right_1.png"
+dest_files=[ "res://.import/standing_right_1.png-abbdd1a7414062cb110a167b13a1e8a5.stex" ]
 
 [params]
 

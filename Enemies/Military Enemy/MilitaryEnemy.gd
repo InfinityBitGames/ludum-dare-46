@@ -32,7 +32,7 @@ func _process(delta):
 	fire_timer += delta
 	if attack_timer >= attack_delay:
 		is_shooting = true
-		attack_timer = 0
+		attack_timer = Random.float(-1.0, 1.0)
 		if is_pointing_left:
 			animator.play("shooting-left")
 		else:
@@ -47,7 +47,10 @@ func check_if_time_to_fire(_delta):
 		#spawn a projectile
 		#fire_timer = 0 #comment out for hardcore mode
 		var bullet = bullet_scene.instance()
-		bullet.position = $Barrel.global_position
+		if is_pointing_left:
+			bullet.position = $BarrelLeft.global_position
+		else:
+			bullet.position = $BarrelRight.global_position
 		var bullet_speed = 0
 		if is_pointing_left:
 			bullet_speed = -bullet.base_bullet_speed

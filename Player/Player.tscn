@@ -25,14 +25,14 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 10 ), ExtResource( 12 ), ExtResource( 8 ), ExtResource( 13 ) ],
-"loop": true,
-"name": "jump",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 16 ) ],
 "loop": true,
 "name": "walking-left",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 12 ), ExtResource( 8 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "jump",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 15 ) ],

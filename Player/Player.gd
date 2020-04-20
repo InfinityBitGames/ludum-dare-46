@@ -24,8 +24,19 @@ func _process(_delta):
 	Canvas.get_node("Label").text = str(stepify(Stats.score, 0.01))
 	Canvas.get_node("ProgressBar").value = Stats.life
 	Canvas.get_node("ProgressBar").max_value = Stats.life_max
+	check_if_dead()
+	
+func check_if_dead():
+	if Stats.life <= 0:
+		print("die stupid worm")
+		#death stuff
+		Stats.last_score = Stats.score
+		if Stats.best_score < Stats.last_score:
+			Stats.best_score = Stats.last_score
+		Game.player_death()
 
 func _physics_process(delta):
+
 		# Create forces
 	var force = Vector2(0, GRAVITY)
 	
@@ -118,6 +129,12 @@ func get_vial():
 		Stats.life = Stats.life_max
 	#gain score
 
+func get_hit(projectile):
+	if typeof(projectile.damage) == TYPE_INT:
+		Stats.life -= projectile.damage
+		$BloodEmitter.bleed(projectile.damage, true)
+		projectile.finish()
+	
 
 func has_key_to_door(door_id):
 	print(keys)
