@@ -31,6 +31,7 @@ func on_pressed_play():
 	$CanvasLayer/BestScore.visible = false
 	$CanvasLayer/LastScore.visible = false
 	Stats.score = 0.0
+	Stats.reset_difficulty()
 
 func player_death():
 	update_scores()

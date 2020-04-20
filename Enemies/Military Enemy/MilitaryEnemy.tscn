@@ -17,14 +17,9 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 3 ), ExtResource( 12 ), ExtResource( 7 ), ExtResource( 10 ) ],
+"frames": [ ExtResource( 8 ), ExtResource( 14 ) ],
 "loop": true,
-"name": "running-right",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 5 ), ExtResource( 13 ) ],
-"loop": true,
-"name": "shooting-left",
+"name": "shooting-right",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 13 ) ],
@@ -32,9 +27,9 @@ animations = [ {
 "name": "idle-left",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 14 ) ],
+"frames": [ ExtResource( 3 ), ExtResource( 12 ), ExtResource( 7 ), ExtResource( 10 ) ],
 "loop": true,
-"name": "idle-right",
+"name": "running-right",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 9 ), ExtResource( 11 ), ExtResource( 6 ), ExtResource( 4 ) ],
@@ -42,9 +37,14 @@ animations = [ {
 "name": "running-left",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 8 ), ExtResource( 14 ) ],
+"frames": [ ExtResource( 14 ) ],
 "loop": true,
-"name": "shooting-right",
+"name": "idle-right",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "shooting-left",
 "speed": 5.0
 } ]
 
@@ -63,3 +63,5 @@ position = Vector2( -12, 3 )
 
 [node name="BarrelRight" type="Position2D" parent="." index="3"]
 position = Vector2( 12, 3 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="4"]

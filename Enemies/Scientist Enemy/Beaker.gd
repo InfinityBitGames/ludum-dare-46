@@ -6,6 +6,8 @@ var throw_velocity = 100.0
 var velocity = Vector2()
 var damage = 20
 
+var finished = false
+
 #sfx
 var beaker_hit = load("res://Sounds/scientist-hit.wav")
 
@@ -20,11 +22,16 @@ func throw(facing_left):
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$AudioStreamPlayer2D.stream = beaker_hit
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
+	if finished and not $AudioStreamPlayer2D.playing:
+		queue_free()
+	if finished:
+		return #cease processing until audio done if finished
 	var force = velocity + Vector2(0, GRAVITY)
 	velocity.y *= .95
 	var _move = move_and_slide(force, Vector2.UP)
@@ -33,9 +40,12 @@ func _process(_delta):
 		var collision = get_slide_collision(i)
 		if collision.collider.name == "PlayerBody":
 			collision.collider.get_hit(self)
+			$AudioStreamPlayer2D.play()
+			visible = false
 
 func finish():
-	queue_free()
+	finished = true
+#	queue_free()
 
 func _on_body_entered(_body):
 	pass # Replace with function body.

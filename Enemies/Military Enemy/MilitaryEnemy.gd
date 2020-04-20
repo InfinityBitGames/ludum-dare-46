@@ -26,6 +26,7 @@ var fire_timer = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$AudioStreamPlayer2D.stream = military_gun
 	if is_pointing_left:
 		animator.play("idle-left")
 	else:
@@ -46,6 +47,9 @@ func _process(delta):
 	if is_shooting:
 		check_continue_shooting(delta)
 		check_if_time_to_fire(delta)
+		if not $AudioStreamPlayer2D.playing:
+			$AudioStreamPlayer2D.play()
+		
 
 func check_if_time_to_fire(_delta):
 	if fire_timer >= fire_rate:

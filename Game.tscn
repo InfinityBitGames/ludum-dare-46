@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://LevelLoader.gd" type="Script" id=1]
 [ext_resource path="res://Game.gd" type="Script" id=2]
@@ -21,9 +21,6 @@
 [ext_resource path="res://Menus/background 4.png" type="Texture" id=19]
 [ext_resource path="res://Menus/Credits screen/back button mask.bmp" type="BitMap" id=20]
 [ext_resource path="res://Player/health_bar_slice_prog.png" type="Texture" id=21]
-[ext_resource path="res://Sounds/ui-click.wav" type="AudioStream" id=22]
-[ext_resource path="res://Sounds/ui-hover.wav" type="AudioStream" id=23]
-[ext_resource path="res://BackButton.gd" type="Script" id=24]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 6 )
@@ -48,13 +45,13 @@ tracks/0/keys = {
 "values": [ Color( 0.811765, 0, 0, 1 ), Color( 0.811765, 0, 0, 1 ), Color( 0.87451, 0, 0, 0 ) ]
 }
 
-[sub_resource type="DynamicFont" id=4]
-font_data = ExtResource( 6 )
-
 [sub_resource type="DynamicFont" id=5]
 font_data = ExtResource( 6 )
 
-[sub_resource type="SpriteFrames" id=6]
+[sub_resource type="DynamicFont" id=6]
+font_data = ExtResource( 6 )
+
+[sub_resource type="SpriteFrames" id=4]
 animations = [ {
 "frames": [ ExtResource( 18 ), ExtResource( 16 ), ExtResource( 11 ), ExtResource( 19 ), ExtResource( 15 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 17 ) ],
 "loop": true,
@@ -126,7 +123,7 @@ margin_top = 350.0
 margin_right = 921.0
 margin_bottom = 364.0
 rect_scale = Vector2( 4, 4 )
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 text = "Best Score: 0.0"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -138,7 +135,7 @@ margin_top = 440.0
 margin_right = 924.0
 margin_bottom = 454.0
 rect_scale = Vector2( 4, 4 )
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
 text = "LastScore: 0.0"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -151,7 +148,7 @@ visible = false
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="CreditsMenu"]
 scale = Vector2( 2, 2 )
-frames = SubResource( 6 )
+frames = SubResource( 4 )
 centered = false
 
 [node name="Sprite" type="Sprite" parent="CreditsMenu"]
@@ -166,17 +163,6 @@ texture_normal = ExtResource( 8 )
 texture_pressed = ExtResource( 9 )
 texture_hover = ExtResource( 10 )
 texture_click_mask = ExtResource( 20 )
-script = ExtResource( 24 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CreditsMenu/Sprite/BackButton"]
-stream = ExtResource( 23 )
-volume_db = -10.0
-
-[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="CreditsMenu/Sprite/BackButton"]
-stream = ExtResource( 22 )
-volume_db = -10.0
-[connection signal="mouse_entered" from="CreditsMenu/Sprite/BackButton" to="CreditsMenu/Sprite/BackButton" method="_on_BackButton_mouse_entered"]
-[connection signal="pressed" from="CreditsMenu/Sprite/BackButton" to="CreditsMenu/Sprite/BackButton" method="_on_BackButton_pressed"]

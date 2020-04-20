@@ -26,6 +26,7 @@ var scientist_scream3 = load("res://Sounds/scientist-scream3.wav")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$AudioStreamPlayer2D.stream = scientist_throw
 	if is_facing_left:
 		$AnimatedSprite.play("idle-left")
 	else:
@@ -74,7 +75,7 @@ func _process(delta):
 func try_to_throw(delta):
 	throw_timer += delta
 	if throw_timer > throw_rate and want_to_throw:
-		print("trying to throw!")
+		$AudioStreamPlayer2D.play()
 		var beaker = beaker_scene.instance()
 		beaker.position = global_position
 		beaker.position.y -= 5
