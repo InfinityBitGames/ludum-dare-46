@@ -4,7 +4,7 @@ onready var animator : AnimatedSprite = $AnimatedSprite
 
 onready var bullet_scene = load("res://Enemies/Bullet.tscn")
 
-export var bullet_spread = 5
+export var bullet_spread = 2
 
 var attack_delay = 5
 var attack_timer = 0

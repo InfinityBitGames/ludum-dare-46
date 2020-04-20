@@ -1,5 +1,7 @@
 extends Node2D
 
+export var starting_level = "LevelThreeWay"
+
 var load_a_level = false
 
 var fade_time = 2.0
@@ -21,7 +23,7 @@ func update_scores():
 	Stats.life_max = Stats.life_default
 	
 func on_pressed_play():
-	$LevelLoader.load_a_level("Level4")
+	$LevelLoader.load_a_level(starting_level)
 	$CanvasLayer/ProgressBar.visible = true
 	$MainMenu.visible = false
 	$CanvasLayer/StayAlive.visible = true
