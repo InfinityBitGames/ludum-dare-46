@@ -6,6 +6,11 @@ onready var bullet_scene = load("res://Enemies/Bullet.tscn")
 
 export var bullet_spread = 2
 
+var military_gun = load("res://Sounds/military-gun.wav")
+var military_scream1 = load("res://Sounds/military-gun.wav")
+var military_scream2 = load("res://Sounds/military-gun.wav")
+var military_scream3 = load("res://Sounds/military-gun.wav")
+
 var attack_delay = 5
 var attack_timer = 0
 var times_to_animate_attack = 5
