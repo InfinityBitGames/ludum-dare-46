@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Levels/LevelBase.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Placeables/Vial.tscn" type="PackedScene" id=2]
@@ -9,6 +9,10 @@
 [ext_resource path="res://Props/empty_desk_prop.png" type="Texture" id=7]
 [ext_resource path="res://Props/vat_prop_empty.png" type="Texture" id=8]
 [ext_resource path="res://Props/computer_desk_prop.png" type="Texture" id=9]
+[ext_resource path="res://Props/big_window_prop.png" type="Texture" id=10]
+[ext_resource path="res://Props/weird box.png" type="Texture" id=11]
+[ext_resource path="res://Props/ceiling vent.png" type="Texture" id=12]
+[ext_resource path="res://Props/small_window_prop.png" type="Texture" id=13]
 
 [node name="Level" instance=ExtResource( 1 )]
 
@@ -68,22 +72,70 @@ position = Vector2( 1041.22, 178.12 )
 z_index = -1
 texture = ExtResource( 8 )
 
-[node name="vat_prop2" type="Sprite" parent="." index="13"]
+[node name="small_window_prop2" type="Sprite" parent="." index="13"]
+position = Vector2( 194.523, 652 )
+texture = ExtResource( 13 )
+
+[node name="small_window_prop" type="Sprite" parent="." index="14"]
+position = Vector2( 146.109, 652 )
+z_index = -1
+texture = ExtResource( 13 )
+
+[node name="weird box4" type="Sprite" parent="." index="15"]
+position = Vector2( 1389.08, 529.091 )
+z_index = -1
+texture = ExtResource( 11 )
+
+[node name="weird box" type="Sprite" parent="weird box4" index="0"]
+position = Vector2( -179.651, -143.541 )
+z_index = -1
+texture = ExtResource( 11 )
+
+[node name="weird box3" type="Sprite" parent="." index="16"]
+position = Vector2( 1404.82, 624.626 )
+z_index = -1
+texture = ExtResource( 11 )
+
+[node name="computer_desk_prop3" type="Sprite" parent="." index="17"]
+position = Vector2( 134, 710 )
+z_index = -1
+texture = ExtResource( 9 )
+
+[node name="big_window_prop" type="Sprite" parent="." index="18"]
+position = Vector2( 985.852, 363.657 )
+z_index = -1
+texture = ExtResource( 10 )
+
+[node name="weird box2" type="Sprite" parent="." index="19"]
+position = Vector2( 722, 481 )
+texture = ExtResource( 11 )
+
+[node name="weird box" type="Sprite" parent="." index="20"]
+position = Vector2( 802, 481 )
+z_index = -1
+texture = ExtResource( 11 )
+
+[node name="ceiling vent" type="Sprite" parent="." index="21"]
+position = Vector2( 1410.86, 136.208 )
+z_index = -1
+texture = ExtResource( 12 )
+
+[node name="vat_prop2" type="Sprite" parent="." index="22"]
 position = Vector2( 980.84, 178.187 )
 z_index = -1
 texture = ExtResource( 5 )
 
-[node name="computer_desk_prop2" type="Sprite" parent="." index="14"]
+[node name="computer_desk_prop2" type="Sprite" parent="." index="23"]
 position = Vector2( 299.987, 485.522 )
 z_index = -1
 texture = ExtResource( 9 )
 
-[node name="computer_desk_prop" type="Sprite" parent="." index="15"]
+[node name="computer_desk_prop" type="Sprite" parent="." index="24"]
 position = Vector2( 223.983, 485.685 )
 z_index = -1
 texture = ExtResource( 9 )
 
-[node name="vat_prop" type="Sprite" parent="." index="16"]
+[node name="vat_prop" type="Sprite" parent="." index="25"]
 position = Vector2( 310, 210 )
 z_index = -1
 texture = ExtResource( 5 )
