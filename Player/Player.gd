@@ -112,7 +112,7 @@ func get_vial():
 	print("eating a vial...of blood!")
 	#play vial eat animation, particles, sounds
 	#gain health
-	Stats.life_max += 1
+	Stats.life_max += 5
 	Stats.life += round(Stats.life_max / 10)
 	if Stats.life > Stats.life_max:
 		Stats.life = Stats.life_max
