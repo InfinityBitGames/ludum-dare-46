@@ -1,6 +1,6 @@
 extends "res://Placeables/Collectible.gd"
 
-var collect_vial_sound = load("res://Sounds/Environment/vial-collect.wav")
+var collect_vial_sound = load("res://Sounds/vial-collect.wav")
 
 func collected():
 	print("collected a vial")

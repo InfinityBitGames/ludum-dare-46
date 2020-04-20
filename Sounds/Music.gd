@@ -34,7 +34,7 @@ func fade_out(fade_time = 1.0):
 	tween.start()
 	# when the tween ends, the music will be stopped
 
-func on_tween_completed(object, key):
+func on_tween_completed(_object, _key):
 	print("fade completed")
 	volume_db = 0
 	stream = next_song

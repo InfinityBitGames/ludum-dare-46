@@ -3,7 +3,7 @@ extends Node2D
 onready var Game = get_tree().get_root().get_node("Game")
 var Player_reference = load("res://Player/Player.tscn")
 
-export var max_blood_particles = 100
+export var max_blood_particles = 1000
 
 func initiate():
 	var Player = Player_reference.instance()
@@ -15,7 +15,7 @@ func _on_Exit_body_entered(body):
 	if body.name == "PlayerBody":
 		Game.level_end()
 
-func _process(delta):
+func _process(_delta):
 	clean_blood_particles()
 
 func clean_blood_particles():

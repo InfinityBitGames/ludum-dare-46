@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://LevelLoader.gd" type="Script" id=1]
 [ext_resource path="res://Game.gd" type="Script" id=2]
@@ -6,9 +6,31 @@
 [ext_resource path="res://CollectibleSounds.gd" type="Script" id=4]
 [ext_resource path="res://Menus/MainMenu.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Menus/Minimal5x7.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://Menus/Credits screen/credit title card.png" type="Texture" id=7]
+[ext_resource path="res://Menus/Credits screen/back button idle.png" type="Texture" id=8]
+[ext_resource path="res://Menus/Credits screen/back button pressed.png" type="Texture" id=9]
+[ext_resource path="res://Menus/Credits screen/back button hover.png" type="Texture" id=10]
+[ext_resource path="res://Menus/background 3.png" type="Texture" id=11]
+[ext_resource path="res://Menus/background 6.png" type="Texture" id=12]
+[ext_resource path="res://Menus/background 7.png" type="Texture" id=13]
+[ext_resource path="res://Menus/background 8.png" type="Texture" id=14]
+[ext_resource path="res://Menus/background 5.png" type="Texture" id=15]
+[ext_resource path="res://Menus/background 2.png" type="Texture" id=16]
+[ext_resource path="res://Menus/background 9.png" type="Texture" id=17]
+[ext_resource path="res://Menus/background 1.png" type="Texture" id=18]
+[ext_resource path="res://Menus/background 4.png" type="Texture" id=19]
+[ext_resource path="res://Menus/Credits screen/back button mask.bmp" type="BitMap" id=20]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 6 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 18 ), ExtResource( 16 ), ExtResource( 11 ), ExtResource( 19 ), ExtResource( 15 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 17 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
 
 [node name="Game" type="Node2D"]
 script = ExtResource( 2 )
@@ -38,3 +60,27 @@ __meta__ = {
 }
 
 [node name="MainMenu" parent="." instance=ExtResource( 5 )]
+
+[node name="CreditsMenu" type="Node2D" parent="."]
+visible = false
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="CreditsMenu"]
+scale = Vector2( 2, 2 )
+frames = SubResource( 2 )
+centered = false
+
+[node name="Sprite" type="Sprite" parent="CreditsMenu"]
+scale = Vector2( 2, 2 )
+texture = ExtResource( 7 )
+centered = false
+
+[node name="BackButton" type="TextureButton" parent="CreditsMenu/Sprite"]
+margin_right = 640.0
+margin_bottom = 360.0
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 9 )
+texture_hover = ExtResource( 10 )
+texture_click_mask = ExtResource( 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

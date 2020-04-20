@@ -28,8 +28,8 @@ func get_level_path(level_name:String):
 	if level_name == "":
 		var levels = []
 		var dir:Directory = Directory.new()
-		dir.open("res://Levels/")
-		dir.list_dir_begin(true, true)
+		var _check = dir.open("res://Levels/")
+		_check = dir.list_dir_begin(true, true)
 		while true:
 			var level : String = dir.get_next()
 			if level == "":

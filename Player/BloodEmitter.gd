@@ -17,7 +17,7 @@ func _process(delta):
 	if spawn_timer >= spawn_rate:
 		var blood_to_spawn = floor(spawn_timer) + 1
 		spawn_timer = 0.0
-		for spawns in range(blood_to_spawn):
+		for _spawns in range(blood_to_spawn):
 			var blood = blood_particle.instance()
 			blood.position = level.get_node("PlayerBody").position
 			blood.position.x += Random.integer(-blood_particle_range, blood_particle_range)
