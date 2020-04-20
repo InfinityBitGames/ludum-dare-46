@@ -55,7 +55,7 @@ position = Vector2( 273.847, 436.053 )
 position = Vector2( 1388, 156 )
 
 [node name="exit_left" type="Sprite" parent="." index="9"]
-position = Vector2( 59, 701 )
+position = Vector2( 57, 701 )
 z_index = -1
 texture = ExtResource( 6 )
 
@@ -84,64 +84,111 @@ position = Vector2( 146.109, 652 )
 z_index = -1
 texture = ExtResource( 13 )
 
-[node name="weird box4" type="Sprite" parent="." index="15"]
+[node name="computer_desk_prop5" type="Sprite" parent="." index="15"]
+position = Vector2( 235.046, 278.669 )
+z_index = -1
+texture = ExtResource( 9 )
+
+[node name="computer_desk_prop4" type="Sprite" parent="." index="16"]
+position = Vector2( 164.107, 278.514 )
+z_index = -1
+texture = ExtResource( 9 )
+
+[node name="ceiling vent" type="Sprite" parent="computer_desk_prop4" index="0"]
+position = Vector2( 241, 19 )
+texture = ExtResource( 12 )
+
+[node name="weird box6" type="Sprite" parent="." index="17"]
+position = Vector2( 541.256, 193.692 )
+z_index = -1
+texture = ExtResource( 11 )
+
+[node name="small_window_prop4" type="Sprite" parent="." index="18"]
+position = Vector2( 814.698, 168 )
+texture = ExtResource( 13 )
+
+[node name="small_window_prop3" type="Sprite" parent="." index="19"]
+position = Vector2( 726.487, 168 )
+z_index = -1
+texture = ExtResource( 13 )
+
+[node name="weird box5" type="Sprite" parent="." index="20"]
+position = Vector2( 1209.43, 385.55 )
+z_index = -1
+texture = ExtResource( 11 )
+
+[node name="weird box4" type="Sprite" parent="." index="21"]
 position = Vector2( 1389.08, 529.091 )
 z_index = -1
 texture = ExtResource( 11 )
 
-[node name="weird box" type="Sprite" parent="weird box4" index="0"]
-position = Vector2( -179.651, -143.541 )
-z_index = -1
-texture = ExtResource( 11 )
-
-[node name="weird box3" type="Sprite" parent="." index="16"]
+[node name="weird box3" type="Sprite" parent="." index="22"]
 position = Vector2( 1404.82, 624.626 )
 z_index = -1
 texture = ExtResource( 11 )
 
-[node name="computer_desk_prop3" type="Sprite" parent="." index="17"]
+[node name="computer_desk_prop3" type="Sprite" parent="." index="23"]
 position = Vector2( 134, 710 )
 z_index = -1
 texture = ExtResource( 9 )
 
-[node name="big_window_prop" type="Sprite" parent="." index="18"]
+[node name="big_window_prop" type="Sprite" parent="." index="24"]
 position = Vector2( 985.852, 363.657 )
 z_index = -1
 texture = ExtResource( 10 )
 
-[node name="weird box2" type="Sprite" parent="." index="19"]
+[node name="weird box2" type="Sprite" parent="." index="25"]
 position = Vector2( 722, 481 )
 z_index = -1
 texture = ExtResource( 11 )
 
-[node name="weird box" type="Sprite" parent="." index="20"]
+[node name="weird box" type="Sprite" parent="." index="26"]
 position = Vector2( 802, 481 )
 z_index = -1
 texture = ExtResource( 11 )
 
-[node name="ceiling vent" type="Sprite" parent="." index="21"]
+[node name="ceiling vent" type="Sprite" parent="." index="27"]
 position = Vector2( 1410.86, 136.208 )
 z_index = -1
 texture = ExtResource( 12 )
 
-[node name="vat_prop2" type="Sprite" parent="." index="22"]
+[node name="vat_prop2" type="Sprite" parent="." index="28"]
 position = Vector2( 980.84, 178.187 )
 z_index = -1
 texture = ExtResource( 5 )
 
-[node name="computer_desk_prop2" type="Sprite" parent="." index="23"]
+[node name="computer_desk_prop2" type="Sprite" parent="." index="29"]
 position = Vector2( 299.987, 485.522 )
 z_index = -1
 texture = ExtResource( 9 )
 
-[node name="computer_desk_prop" type="Sprite" parent="." index="24"]
+[node name="computer_desk_prop" type="Sprite" parent="." index="30"]
 position = Vector2( 223.983, 485.685 )
 z_index = -1
 texture = ExtResource( 9 )
 
-[node name="vat_prop" type="Sprite" parent="." index="25"]
+[node name="vat_prop" type="Sprite" parent="." index="31"]
 position = Vector2( 310, 210 )
 z_index = -1
 texture = ExtResource( 5 )
+
+[node name="weird box7" type="Sprite" parent="." index="32"]
+position = Vector2( 350.688, 400.155 )
+z_index = -1
+texture = ExtResource( 11 )
+
+[node name="computer_desk_prop6" type="Sprite" parent="." index="33"]
+position = Vector2( 1034.91, 678.032 )
+texture = ExtResource( 9 )
+
+[node name="vat_prop3" type="Sprite" parent="." index="34"]
+position = Vector2( 946.317, 658.049 )
+z_index = -1
+texture = ExtResource( 5 )
+
+[node name="vat_prop_empty" type="Sprite" parent="vat_prop3" index="0"]
+position = Vector2( 161.83, 0 )
+z_index = -1
+texture = ExtResource( 8 )
 
 [editable path="Doors/Door"]
