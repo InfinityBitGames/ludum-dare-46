@@ -17,6 +17,10 @@ var player_hit = load("res://Sounds/leech-hit.wav")
 var player_jump = load("res://Sounds/leech-jump.wav")
 var player_walk = load("res://Sounds/leech-walk.wav")
 
+func _process(delta):
+	get_tree().get_root().get_node("Game").get_node("CanvasLayer").get_node("Label").text = \
+		str(stepify(Stats.score, 0.01))
+
 func _physics_process(delta):
 		# Create forces
 	var force = Vector2(0, GRAVITY)

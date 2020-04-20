@@ -34,4 +34,6 @@ shape = SubResource( 1 )
 [node name="BloodParticles" type="Node2D" parent="."]
 
 [node name="Enemies" type="Node2D" parent="."]
+
+[node name="Projectiles" type="Node2D" parent="."]
 [connection signal="body_entered" from="Exit" to="." method="_on_Exit_body_entered"]
