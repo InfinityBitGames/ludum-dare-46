@@ -27,19 +27,21 @@ position = Vector2( 81.9305, 252.9 )
 position = Vector2( 353.197, 700.22 )
 
 [node name="CollisionShape2D" parent="Exit" index="0"]
-position = Vector2( -289.344, 12.0305 )
+position = Vector2( -294.06, 12.0305 )
 
 [node name="Door" parent="Doors" index="0" instance=ExtResource( 3 )]
 position = Vector2( 464, 472 )
 door_id = 0
 
 [node name="Door2" parent="Doors" index="1" instance=ExtResource( 3 )]
+modulate = Color( 0.929412, 0.0745098, 0.0745098, 1 )
 position = Vector2( 412, 696 )
 
 [node name="Key" parent="Keys" index="0" instance=ExtResource( 4 )]
 position = Vector2( 920.904, 478.166 )
 
 [node name="Key2" parent="Keys" index="1" instance=ExtResource( 4 )]
+modulate = Color( 0.929412, 0.0745098, 0.0745098, 1 )
 position = Vector2( 1196.72, 476.879 )
 door_id = 1
 
@@ -74,6 +76,7 @@ texture = ExtResource( 8 )
 
 [node name="small_window_prop2" type="Sprite" parent="." index="13"]
 position = Vector2( 194.523, 652 )
+z_index = -1
 texture = ExtResource( 13 )
 
 [node name="small_window_prop" type="Sprite" parent="." index="14"]
@@ -108,6 +111,7 @@ texture = ExtResource( 10 )
 
 [node name="weird box2" type="Sprite" parent="." index="19"]
 position = Vector2( 722, 481 )
+z_index = -1
 texture = ExtResource( 11 )
 
 [node name="weird box" type="Sprite" parent="." index="20"]
