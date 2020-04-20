@@ -1,5 +1,8 @@
 extends KinematicBody2D
 
+onready var Game = get_tree().get_root().get_node("Game")
+onready var Canvas = Game.get_node("CanvasLayer")
+
 var velocity : Vector2
 var jumping = false
 
@@ -18,8 +21,9 @@ var player_jump = load("res://Sounds/leech-jump.wav")
 var player_walk = load("res://Sounds/leech-walk.wav")
 
 func _process(_delta):
-	get_tree().get_root().get_node("Game").get_node("CanvasLayer").get_node("Label").text = \
-		str(stepify(Stats.score, 0.01))
+	Canvas.get_node("Label").text = str(stepify(Stats.score, 0.01))
+	Canvas.get_node("ProgressBar").value = Stats.life
+	Canvas.get_node("ProgressBar").max_value = Stats.life_max
 
 func _physics_process(delta):
 		# Create forces
@@ -108,6 +112,10 @@ func get_vial():
 	print("eating a vial...of blood!")
 	#play vial eat animation, particles, sounds
 	#gain health
+	Stats.life_max += 1
+	Stats.life += round(Stats.life_max / 10)
+	if Stats.life > Stats.life_max:
+		Stats.life = Stats.life_max
 	#gain score
 
 

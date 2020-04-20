@@ -8,11 +8,13 @@ func _ready():
 	_check = $MainMenu/AnimatedSprite/PlayButton.connect("pressed", self, "on_pressed_play")
 	_check = $MainMenu/AnimatedSprite/CreditsButton.connect("pressed", self, "on_pressed_credits")
 	_check = $CreditsMenu/Sprite/BackButton.connect("pressed", self, "on_pressed_back")
-	pass
+	$CanvasLayer/ProgressBar.visible = false
 
 func on_pressed_play():
 	$LevelLoader.load_a_level("StartingLevel")
+	$CanvasLayer/ProgressBar.visible = true
 	$MainMenu.visible = false
+	
 	Stats.score = 0.0
 	print("play that sucka!")
 

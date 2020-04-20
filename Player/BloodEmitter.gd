@@ -23,4 +23,7 @@ func _process(delta):
 			blood.position.x += Random.integer(-blood_particle_range, blood_particle_range)
 			blood.position.y += Random.integer(-blood_particle_range, blood_particle_range)
 			blood.rotation_degrees = Random.integer(0, 359)
+			print(Stats.life)
+			Stats.life -= 1
 			level.get_node("BloodParticles").add_child(blood)
+			

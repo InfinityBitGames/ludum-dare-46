@@ -42,7 +42,7 @@ func _process(delta):
 		check_continue_shooting(delta)
 		check_if_time_to_fire(delta)
 
-func check_if_time_to_fire(delta):
+func check_if_time_to_fire(_delta):
 	if fire_timer >= fire_rate:
 		#spawn a projectile
 		#fire_timer = 0 #comment out for hardcore mode
