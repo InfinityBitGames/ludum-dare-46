@@ -18,6 +18,12 @@ var throw_timer = throw_rate
 
 export var is_facing_left = true
 
+#sound fx
+var scientist_throw = load("res://Sounds/scientist-throw.wav")
+var scientist_scream1 = load("res://Sounds/scientist-scream1.wav")
+var scientist_scream2 = load("res://Sounds/scientist-scream2.wav")
+var scientist_scream3 = load("res://Sounds/scientist-scream3.wav")
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	if is_facing_left:

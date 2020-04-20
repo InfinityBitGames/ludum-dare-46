@@ -6,6 +6,9 @@ var throw_velocity = 100.0
 var velocity = Vector2()
 var damage = 20
 
+#sfx
+var beaker_hit = load("res://Sounds/scientist-hit.wav")
+
 func throw(facing_left):
 	velocity = Vector2(0, -throw_velocity * 3)
 	if facing_left:
