@@ -16,5 +16,5 @@ position = Vector2( 261.891, 69.2951 )
 position = Vector2( 141.885, 38 )
 
 [node name="Key" parent="Keys" index="0" instance=ExtResource( 2 )]
-position = Vector2( 110.849, -46.7474 )
+position = Vector2( 111.604, -30.5213 )
 door_id = 1
