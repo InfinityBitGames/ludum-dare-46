@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/leech-land.wav-7189539c35fe5b9be623e7de7e1954f6.sample"
+path="res://.import/leech-hit.wav-7bf53f919e197411100391fc36198152.sample"
 
 [deps]
 
-source_file="res://Sounds/leech-land.wav"
-dest_files=[ "res://.import/leech-land.wav-7189539c35fe5b9be623e7de7e1954f6.sample" ]
+source_file="res://Sounds/leech-hit.wav"
+dest_files=[ "res://.import/leech-hit.wav-7bf53f919e197411100391fc36198152.sample" ]
 
 [params]
 

@@ -13,7 +13,8 @@ export var JUMP_SPEED = 250.0
 var keys = []
 
 #sound fx
-var player_hit = load("res://Sounds/leech-land.wav")
+var player_hit = load("res://Sounds/leech-hit.wav")
+var player_jump = load("res://Sounds/leech-jump.wav")
 var player_walk = load("res://Sounds/leech-walk.wav")
 
 func _physics_process(delta):
@@ -66,7 +67,7 @@ func jump_physics():
 		jumping = false
 	var jump = Input.is_action_pressed("up")
 	if jump and not jumping:
-		play_sound("player-hit")
+		play_sound("player-jump")
 		$PlayerSprite.play("jump")
 		velocity.y = -JUMP_SPEED
 		jumping = true
@@ -85,6 +86,8 @@ func play_sound(sound_name):
 		$SoundPlayer.stream = player_hit
 	if sound_name == "player-walk":
 		$SoundPlayer.stream = player_walk
+	if sound_name == "player-jump":
+		$SoundPlayer.stream = player_jump
 	
 	if $SoundPlayer.stream != null:
 		$SoundPlayer.play()
