@@ -3,6 +3,8 @@ extends Node2D
 var levels_to_change_music = 5
 var levels_loaded = 0
 
+var current_level = ""
+
 func load_a_level(level_name = ""):
 	for child in get_children():
 		remove_child(child)
@@ -10,7 +12,11 @@ func load_a_level(level_name = ""):
 	
 	Stats.increase_difficulty()
 	
-	var next_level = load(get_level_path(level_name))
+	var next_level_name = get_level_path(level_name)
+	var next_level = load("res://Levels/" + next_level_name)
+	current_level = next_level_name
+	if not current_level.ends_with(".tscn"):
+		current_level = current_level + ".tscn"
 	var level = next_level.instance()
 	level.initiate()
 #	add_child_below_node(level, get_node("Level").get_node("TileMap"))
@@ -37,8 +43,13 @@ func get_level_path(level_name:String):
 			if level.ends_with(".tscn") and level != "LevelBase.tscn"and level != "StartingLevel.tscn":
 				levels.append(level)
 		dir.list_dir_end()
+		var this_level = levels.find(current_level)
+		if this_level >= 0:
+			levels.remove(this_level)
+		else:
+			print(current_level + " : " + str(levels))
 		var random_level = Random.from_array(levels)
-		return "res://Levels/" + random_level
+		return random_level
 	if not level_name.ends_with(".tscn"):
 		level_name = level_name + ".tscn"
-	return "res://Levels/" + level_name
+	return level_name

@@ -1,6 +1,7 @@
 extends Node2D
 
-export var starting_level = "LevelThreeWay"
+export var starting_level = "StartingLevel"
+export var flat_level_score = 10
 
 var load_a_level = false
 
@@ -56,6 +57,7 @@ func level_start():
 
 func level_end():
 	load_a_level = true
+	Stats.score += flat_level_score
 
 func _process(delta):
 	Stats.score += delta
