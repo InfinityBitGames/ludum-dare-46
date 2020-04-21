@@ -125,6 +125,7 @@ texture = ExtResource( 11 )
 
 [node name="small_window_prop4" type="Sprite" parent="." index="18"]
 position = Vector2( 814.698, 168 )
+z_index = -1
 texture = ExtResource( 13 )
 
 [node name="small_window_prop3" type="Sprite" parent="." index="19"]
