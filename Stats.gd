@@ -1,10 +1,10 @@
 extends Node
 
 onready var difficulty = 1
-onready var difficulty_multiplier = 1.1
+onready var difficulty_multiplier = 1.2
 
 onready var score = 0.0
-onready var life = 100
+onready var life = 1000
 onready var life_max = 1000
 onready var life_default = 1000
 
