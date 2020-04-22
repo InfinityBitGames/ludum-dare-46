@@ -48,9 +48,13 @@ func player_death():
 
 func on_pressed_credits():
 	$CreditsMenu.visible = true
+	$CanvasLayer/BestScore.visible = false
+	$CanvasLayer/LastScore.visible = false
 
 func on_pressed_back():
 	$CreditsMenu.visible = false
+	$CanvasLayer/BestScore.visible = true
+	$CanvasLayer/LastScore.visible = true
 
 func level_start():
 	pass
