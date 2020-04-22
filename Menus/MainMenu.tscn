@@ -50,7 +50,6 @@ __meta__ = {
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="AnimatedSprite/PlayButton"]
 stream = ExtResource( 19 )
-volume_db = -8.0
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="AnimatedSprite/PlayButton"]
 stream = ExtResource( 20 )
@@ -69,11 +68,9 @@ __meta__ = {
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="AnimatedSprite/CreditsButton"]
 stream = ExtResource( 19 )
-volume_db = -8.0
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="AnimatedSprite/CreditsButton"]
 stream = ExtResource( 21 )
-volume_db = -10.0
 [connection signal="mouse_entered" from="AnimatedSprite/PlayButton" to="AnimatedSprite/PlayButton" method="_on_PlayButton_mouse_entered"]
 [connection signal="pressed" from="AnimatedSprite/PlayButton" to="AnimatedSprite/PlayButton" method="_on_PlayButton_pressed"]
 [connection signal="mouse_entered" from="AnimatedSprite/CreditsButton" to="AnimatedSprite/CreditsButton" method="_on_CreditsButton_mouse_entered"]

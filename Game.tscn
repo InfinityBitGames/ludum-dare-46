@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://LevelLoader.gd" type="Script" id=1]
 [ext_resource path="res://Game.gd" type="Script" id=2]
@@ -21,6 +21,9 @@
 [ext_resource path="res://Menus/background 4.png" type="Texture" id=19]
 [ext_resource path="res://Menus/Credits screen/back button mask.bmp" type="BitMap" id=20]
 [ext_resource path="res://Player/health_bar_slice_prog.png" type="Texture" id=21]
+[ext_resource path="res://BackButton.gd" type="Script" id=22]
+[ext_resource path="res://Sounds/ui-hover.wav" type="AudioStream" id=23]
+[ext_resource path="res://Sounds/ui-click.wav" type="AudioStream" id=24]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 6 )
@@ -163,6 +166,15 @@ texture_normal = ExtResource( 8 )
 texture_pressed = ExtResource( 9 )
 texture_hover = ExtResource( 10 )
 texture_click_mask = ExtResource( 20 )
+script = ExtResource( 22 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CreditsMenu/Sprite/BackButton"]
+stream = ExtResource( 23 )
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="CreditsMenu/Sprite/BackButton"]
+stream = ExtResource( 24 )
+[connection signal="mouse_entered" from="CreditsMenu/Sprite/BackButton" to="CreditsMenu/Sprite/BackButton" method="_on_BackButton_mouse_entered"]
+[connection signal="pressed" from="CreditsMenu/Sprite/BackButton" to="CreditsMenu/Sprite/BackButton" method="_on_BackButton_pressed"]
